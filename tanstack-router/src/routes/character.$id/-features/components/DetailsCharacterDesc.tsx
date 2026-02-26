@@ -14,6 +14,7 @@ import DetailsCharacterContext from "../contexts/DetailsCharacterContext";
 
 export default function DetailsCharacterDesc() {
   const { character, isLoading } = useContext(DetailsCharacterContext);
+  if (!character) return;
 
   const cards: {
     label: string;
@@ -22,10 +23,10 @@ export default function DetailsCharacterDesc() {
       Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
     >;
   }[] = [
-    { label: "Ki Atual", value: character?.ki ?? "N/A", icon: Zap },
-    { label: "Maior Ki", value: character?.maxKi ?? "N/A", icon: ArrowUpDown },
-    { label: "Raça", value: character?.race ?? "N/A", icon: Users },
-    { label: "Gênero", value: character?.gender ?? "N/A", icon: GitCompare },
+    { label: "Ki Atual", value: character.ki ?? "N/A", icon: Zap },
+    { label: "Maior Ki", value: character.maxKi ?? "N/A", icon: ArrowUpDown },
+    { label: "Raça", value: character.race ?? "N/A", icon: Users },
+    { label: "Gênero", value: character.gender ?? "N/A", icon: GitCompare },
   ];
 
   return (
@@ -41,9 +42,7 @@ export default function DetailsCharacterDesc() {
               <p className="text-xs uppercase tracking-widest font-bold opacity-80">
                 Planeta de Origem
               </p>
-              <p className="text-xl font-bold">
-                {character?.originPlanet.name}
-              </p>
+              <p className="text-xl font-bold">{character.originPlanet.name}</p>
             </div>
           </div>
         </div>
@@ -56,7 +55,7 @@ export default function DetailsCharacterDesc() {
               <p className="text-xs uppercase tracking-widest font-bold opacity-80">
                 Raça
               </p>
-              <p className="text-xl font-bold">{character?.race}</p>
+              <p className="text-xl font-bold">{character.race}</p>
             </div>
           </div>
         </div>
@@ -88,7 +87,7 @@ export default function DetailsCharacterDesc() {
           Descrição
         </p>
         <div className="max-w-none text-slate-600 leading-relaxed">
-          <p>{character?.description}</p>
+          <p>{character.description}</p>
         </div>
       </div>
     </div>

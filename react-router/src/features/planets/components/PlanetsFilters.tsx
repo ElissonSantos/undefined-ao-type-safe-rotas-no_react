@@ -9,10 +9,10 @@ export default function PlanetsFilters() {
         <div className="md:col-span-5">
           <div className="relative group">
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
-              Raça
+              Destruido?
             </span>
             <select
-              className="w-full h-12 pl-13 pr-10 bg-white border border-slate-200 rounded-xl appearance-none focus:ring-2 focus:ring-black outline-none cursor-pointer"
+              className="w-full h-12 pl-24 pr-10 bg-white border border-slate-200 rounded-xl appearance-none focus:ring-2 focus:ring-black outline-none cursor-pointer"
               value={
                 filters.isDestroyed === undefined
                   ? ""

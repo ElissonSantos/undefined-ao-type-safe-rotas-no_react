@@ -1,12 +1,10 @@
 import { createContext, useEffect, useState } from "react";
-import { useLocation } from "react-router";
 import axios, { AxiosError } from "axios";
 import type {
   Character,
   CharactersInput,
   CharactersResponse,
 } from "../../../libs/models/characters";
-import type { RaceEnumType } from "../../../libs/enums/race.enum";
 
 type CharactersContextType = {
   response: CharactersResponse | null;
@@ -29,14 +27,10 @@ export const CharactersProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const { search } = useLocation();
-  const queryParams = new URLSearchParams(search);
-  const race = queryParams.get("race") as RaceEnumType | null;
-
   const [filters, setFilters] = useState<CharactersInput>({
     page: 1,
     limit: 8,
-    race: race || undefined,
+    race: undefined,
   });
   const [response, setResponse] = useState<CharactersResponse | null>(null);
   const [isLoading, setIsLoading] = useState(false);

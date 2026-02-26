@@ -21,10 +21,8 @@ export default function Sidebar() {
 
       <h2 className="mt-5">Menu</h2>
 
-      <div className="flex text-center flex-col mt-6 gap-2">
-        <Link to="/characters" className="mb-4">
-          Personagens
-        </Link>
+      <div className="flex text-center flex-col mt-6 gap-4">
+        <Link to="/characters">Personagens</Link>
 
         <Link to="/planets">Planetas</Link>
       </div>
