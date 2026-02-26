@@ -1,17 +1,17 @@
-import { Link } from "react-router";
+import { Link } from "@tanstack/react-router";
 
 export default function Sidebar() {
   return (
     <div className="flex items-center flex-col fixed h-screen w-40 mt-6 px-3">
       <div className="w-full mt-2 flex justify-center">
         <img
-          src="https://reactrouter.com/favicon-light.png"
+          src="https://tanstack.com/images/logos/splash-light.png"
           alt="logo"
           className="w-45"
         />
       </div>
 
-      <div className="w-full flex justify-center">
+      <div className="w-full mt-2 flex justify-center">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Dragon_Ball_Z_logo.svg"
           alt="logo"

@@ -7,8 +7,8 @@ import {
   FileText,
   type LucideProps,
 } from "lucide-react";
+import Loading from "../../../../../components/Loading";
 import DetailsCharacterContext from "../contexts/DetailsCharacterContext";
-import Loading from "../../../components/Loading";
 
 export default function DetailsCharacterDesc() {
   const { character, isLoading } = useContext(DetailsCharacterContext);

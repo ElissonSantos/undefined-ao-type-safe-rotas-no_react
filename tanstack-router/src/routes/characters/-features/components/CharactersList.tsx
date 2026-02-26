@@ -1,6 +1,6 @@
-import Loading from "../../../components/Loading";
+import Loading from "../../../../components/Loading";
+import CharacterView from "../../../../components/CharacterView";
 import useCharactersContext from "../hooks/useCharactersContext";
-import CharacterView from "../../../components/CharacterView";
 
 export default function CharactersList() {
   const { response, isLoading } = useCharactersContext();
