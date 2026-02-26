@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import {
+  Earth,
+  Group,
   Zap,
   ArrowUpDown,
   Users,
@@ -29,6 +31,36 @@ export default function DetailsCharacterDesc() {
   return (
     <div className="relative flex flex-col mx-auto">
       <Loading loading={isLoading} />
+
+      <div className="grid grid-cols-2 gap-4">
+        <div className="w-full flex bg-[#e35124] text-white !p-5 items-center !rounded-xl justify-between">
+          <div className="text-left flex gap-4 items-center">
+            <Earth size={30} />
+
+            <div>
+              <p className="text-xs uppercase tracking-widest font-bold opacity-80">
+                Planeta de Origem
+              </p>
+              <p className="text-xl font-bold">
+                {character?.originPlanet.name}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full flex bg-[#e35124] text-white !p-5 items-center !rounded-xl justify-between">
+          <div className="text-left flex gap-4 items-center">
+            <Group size={30} />
+
+            <div>
+              <p className="text-xs uppercase tracking-widest font-bold opacity-80">
+                Raça
+              </p>
+              <p className="text-xl font-bold">{character?.race}</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
         {cards.map((card, i) => (

@@ -1,5 +1,5 @@
 import { FileText, MapPin } from "lucide-react";
-import CharacterView from "../../../../../components/CharacterView";
+import CharacterView from "../../../../components/CharacterView";
 import useDetailsPlanetContext from "../hooks/useDetailsPlanetContext";
 
 export default function DetailsPlanetDesc() {

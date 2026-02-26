@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
-import type { PlanetResponse } from "../../../../../libs/models/detailsPlanet";
+import type { PlanetResponse } from "../../../../libs/models/detailsPlanet";
 
 type DetailsPlanetContextType = {
   planet: PlanetResponse | null;

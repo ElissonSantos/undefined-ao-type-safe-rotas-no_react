@@ -1,4 +1,4 @@
-import Loading from "../../../../../components/Loading";
+import Loading from "../../../../components/Loading";
 import useDetailsPlanetContext from "../hooks/useDetailsPlanetContext";
 
 export default function DetailsPlanetHeader() {

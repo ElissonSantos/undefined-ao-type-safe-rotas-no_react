@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
-import type { CharacterResponse } from "../../../../../libs/models/datailsCharacters";
+import type { CharacterResponse } from "../../../../libs/models/datailsCharacters";
 
 type DetailsCharacterContextType = {
   character: CharacterResponse | null;

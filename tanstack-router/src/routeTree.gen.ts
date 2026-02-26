@@ -13,8 +13,8 @@ import { Route as CatchAllRouteImport } from './routes/$catchAll'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PlanetsIndexRouteImport } from './routes/planets/index'
 import { Route as CharactersIndexRouteImport } from './routes/characters/index'
-import { Route as PlanetIdIndexRouteImport } from './routes/planet/$id/index'
-import { Route as CharacterIdIndexRouteImport } from './routes/character/$id/index'
+import { Route as PlanetIdIndexRouteImport } from './routes/planet.$id/index'
+import { Route as CharacterIdIndexRouteImport } from './routes/character.$id/index'
 
 const CatchAllRoute = CatchAllRouteImport.update({
   id: '/$catchAll',
